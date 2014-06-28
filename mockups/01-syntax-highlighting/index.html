@@ -79,9 +79,16 @@
     &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js">&lt;/script>
 </pre>
  
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/shCore.js"></script>
 <script type="text/javascript" src="js/shBrushXml.js"></script>
  
-<script type="text/javascript">SyntaxHighlighter.all()</script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+
+    setTimeout( function() {
+        $('<td class="limit"></td>').insertBefore('td.gutter');
+    }, 0);
+</script>
 </body>
 </html>

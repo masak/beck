@@ -29,6 +29,12 @@
 .syntaxhighlighter .gutter .line {
   border-right: 1px solid #888;
 }
+.syntaxhighlighter .limit {
+  border-right: 1px solid #888;
+  position: relative;
+  z-index: 1;
+  left: 80em;
+}
 .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
   color: #fff;
 }
