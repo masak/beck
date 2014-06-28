@@ -18,11 +18,15 @@ Yes.
 
 ## Roadmap
 
-- [ ] Full-document textarea
+- [-] Full-document textarea
+    - [x] Start from the Ace editor
+    - [ ] Increase the font size
+    - [ ] Change the style of the gutter
+    - [ ] Remove the little arrows in the gutter
 - [ ] Color scheme
-- [ ] Horizontal 80-col marker
+- [x] Horizontal 80-col marker
 - [ ] Backtick button toolbar
-- [ ] Syntax highlighting
+- [x] Syntax highlighting
 - [ ] Expanding trigger words
 - [ ] Refactoring
     - [ ] Extract variable
