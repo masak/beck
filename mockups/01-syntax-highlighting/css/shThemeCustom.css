@@ -1,0 +1,51 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.syntaxhighlighter {
+  background-color: #222;
+}
+.syntaxhighlighter .line.alt1 {
+  background-color: #222;
+}
+.syntaxhighlighter .line.alt2 {
+  background-color: #222;
+}
+.syntaxhighlighter .gutter {
+  color: #afafaf;
+}
+.syntaxhighlighter .gutter .line {
+  border-right: 1px solid #888;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #fff;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #789;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: #dd7;
+  text-decoration: none;
+}
+.syntaxhighlighter .keyword {
+  color: #f27;
+}
+.syntaxhighlighter .preprocessor {
+  color: #789;
+}
+
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: #ad3;
+}
