@@ -32,6 +32,5 @@ Yes.
 
 ## Collected resources
 
-* Use [this
-  page](http://scotch.io/tutorials/javascript/angularjs-multi-step-form-using-ui-router)
-  for a very nice color theme, both for HTML and JavaScript.
+* The colors I want seem to be exactly those in the "okaida" theme at
+  [prismjs](http://prismjs.com/)
