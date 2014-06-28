@@ -18,7 +18,7 @@ Yes.
 
 ## Roadmap
 
-- [-] Full-document textarea
+- [ ] Full-document textarea
     - [x] Start from the Ace editor
     - [ ] Increase the font size
     - [ ] Change the style of the gutter
