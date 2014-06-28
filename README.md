@@ -34,3 +34,5 @@ Yes.
 
 * The colors I want seem to be exactly those in the "okaida" theme at
   [prismjs](http://prismjs.com/)
+* The [Ace](http://ace.c9.io/) editor seems very mature and could be
+  a starting point to get something going quickly.
