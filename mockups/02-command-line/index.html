@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mockup 01: syntax highlighting</title>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeCustom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            background: #222;
+        }
+    </style>
+  </head>
+<body>
+
+<pre class="brush: xml">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title>Issue tracker&lt;/title>
+
+    &lt;link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  &lt;/head>
+  &lt;body ng-app="issuetracker" ng-controller="Issues" class="container">
+    &lt;h1>{{title}}&lt;/h1>
+
+    &lt;form class="form-inline">
+      &lt;!-- The variable for the input can sit directly in the controller $scope, not in $scope.issue,
+           because $scope.issue is only really for things in the ng-repeat below. -->
+
+      &lt;input class="form-control" ng-model="newDescription" placeholder="Issue description...">
+      &lt;button class="btn btn-primary" ng-click="createIssue()" >Create issue&lt;/button>
+    &lt;/form>
+
+    &lt;br>
+
+    &lt;table class="table table-bordered table-hover">
+      &lt;tr>
+        &lt;th>
+          &lt;!-- The id is a warning signal. See comment in the JavaScript about a directive. -->
+          &lt;input type="checkbox" id="all-issues-checkbox" ng-model="allSelected" ng-change="selectOrDeselectAll()">
+        &lt;/th>
+        &lt;th>
+          &lt;button class="btn btn-default" ng-click="closeIssues()">Close&lt;/button>
+          &lt;button class="btn btn-default" ng-click="reopenIssues()">Reopen&lt;/button>
+        &lt;/th>
+        &lt;th>&lt;/th>
+      &lt;/tr>
+      &lt;tr ng-repeat="issue in issues" ng-class="issue.closed ? 'active' : 'success'">
+        &lt;td>
+          &lt;!-- Note that even if we don't include the .selected property in issues when we create
+               them, Angular will still do the right thing. Undefined/nonexistent is synonymous
+               with false. -->
+
+          &lt;input type="checkbox" ng-model="issue.selected" ng-change="updateAllCheckbox()">
+          &nbsp; &nbsp;
+          &lt;span class="glyphicon" ng-class="issue.closed ? 'glyphicon-remove' : 'glyphicon-ok'">&lt;/span>
+        &lt;/td>
+        &lt;td>
+          {{issue.description}}
+        &lt;/td>
+        &lt;td>
+          #{{issue.id}}
+        &lt;/td>
+      &lt;/div>
+    &lt;/table>
+ 
+    &lt;script src="http://code.jquery.com/jquery-1.11.0.min.js">&lt;/script>
+    &lt;script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">&lt;/script>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js">&lt;/script>
+</pre>
+ 
+<div class="input-group input-group-lg" style="position: fixed; top: 50%; width: 80%; left: 10%">
+  <span class="input-group-addon"><span class="glyphicon glyphicon-cog"></span></span>
+  <input type="text" class="form-control" autofocus>
+</div>
+ 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+ 
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+
+    setTimeout( function() {
+        $('<td class="limit"></td>').insertBefore('td.gutter');
+    }, 0);
+</script>
+</body>
+</html>
