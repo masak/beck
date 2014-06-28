@@ -23,6 +23,7 @@ Yes.
 - [ ] Horizontal 80-col marker
 - [ ] Backtick button toolbar
 - [ ] Syntax highlighting
+- [ ] Expanding trigger words
 - [ ] Refactoring
     - [ ] Extract variable
     - [ ] Extract function
