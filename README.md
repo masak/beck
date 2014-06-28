@@ -29,3 +29,9 @@ Yes.
     - [ ] Extract function
     - [ ] Extract `ng-repeat`
     - [ ] DWIM refactor command (double backtick?)
+
+## Collected resources
+
+* Use [this
+  page](http://scotch.io/tutorials/javascript/angularjs-multi-step-form-using-ui-router)
+  for a very nice color theme, both for HTML and JavaScript.
