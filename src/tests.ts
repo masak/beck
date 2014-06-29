@@ -11,5 +11,5 @@ declare var Highlighting;
 
 QUnit.test("plain text", function(assert) {
     var result = Highlighting.parse('this is just plain text');
-    assert.deepEqual(result, ['plain']);
+    assert.deepEqual(result, [Highlighting.Token.Plain]);
 });
