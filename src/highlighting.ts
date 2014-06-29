@@ -5,7 +5,7 @@ module Highlighting {
         Plain, Element, Attribute, String, Comment, Preprocessor, Error
     }
 
-    export function parse(input: string) {
+    export function parse(input: string): Token[] {
         return [Token.Plain];
     }
 }
