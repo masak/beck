@@ -10,7 +10,6 @@ module Highlighting {
     }
 }
 
-// plain
 // element
 // attribute
 // string
