@@ -1,6 +1,8 @@
 TYPESCRIPT = tsc
 
-all : src/syntax-highlighting.js
+JS_FILES = src/syntax-highlighting.js src/tests.js
 
-src/syntax-highlighting.js : src/syntax-highlighting.ts
-	$(TYPESCRIPT) src/syntax-highlighting.ts
+all : $(JS_FILES)
+
+src/%.js : src/%.ts
+	$(TYPESCRIPT) $<
