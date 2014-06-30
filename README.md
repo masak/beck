@@ -80,3 +80,6 @@ Yes.
   [prismjs](http://prismjs.com/)
 * The [Ace](http://ace.c9.io/) editor seems very mature and could be
   a starting point to get something going quickly.
+* The [features of Resharper](http://www.jetbrains.com/resharper/features/)
+  look well worth investigating in detail. It's free to download and
+  evaluate.
