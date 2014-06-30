@@ -73,6 +73,11 @@ Yes.
       replacement. Even after the action is completed, all the replaced
       sites are highlighted, and the user can cycle between them and undo
       or approve them individually.
+* There is a heavy focus on "the DWIM action". A backtick triggers the
+  command line, but pressing the backtick twice picks an action that's
+  most appropriate considering the user's recent actions. The editor goes
+  out of its way trying to guess what this is, but prefers to do nothing
+  if it's not sure.
 
 ## Collected resources
 
