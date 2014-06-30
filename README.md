@@ -88,3 +88,5 @@ Yes.
 * The [features of Resharper](http://www.jetbrains.com/resharper/features/)
   look well worth investigating in detail. It's free to download and
   evaluate.
+* [TSLint](https://github.com/palantir/tslint) is also interesting to
+  keep an eye on.
