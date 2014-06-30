@@ -41,6 +41,9 @@ Yes.
 * Syntax highlighting is a module. (Though likely the text region types that
   syntax highlighting assigns are core and a closed set.)
 * Themes are modules.
+* Code completion is a module. A given language hooks into the AST that has
+  been parsed for it, and figures out what names are available in a given
+  namespace.
 * Refactoring support is a module. Refactoring actions for a given language
   come in modules.
 * When the editor starts up, it does so in "bare" mode with minimal footprint.
