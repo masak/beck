@@ -90,3 +90,20 @@ Yes.
   evaluate.
 * [TSLint](https://github.com/palantir/tslint) is also interesting to
   keep an eye on.
+* These links come from a previous effort to catalogue and understand
+  extant JavaScript parsers out there:
+    * [Grasp](http://graspjs.com/) ([Git repo](https://github.com/gkz/grasp.git))
+    * [Esprima](http://esprima.org/) ([Git repo](https://github.com/ariya/esprima))
+    * Whatever it is that [jslint](http://jslint.com/) and [jshint](http://jshint.com/) are using
+    * [Narcissus](https://github.com/mozilla/narcissus/)
+    * [traceur-compiler](https://github.com/google/traceur-compiler)
+    * [ECMAScript 5 parser](http://es-lab.googlecode.com/svn/trunk/site/esparser/index.html)
+    * Another [ECMAScript 5 parser](http://esparser.qfox.nl/)
+    * [reflect.js](https://github.com/zaach/reflect.js)
+    * [UglifyJS](https://github.com/mishoo/UglifyJS)
+    * [JsonMLASTFormat](http://code.google.com/p/es-lab/wiki/JsonMLASTFormat)
+    * [treehugger.js](https://github.com/ajaxorg/treehugger)
+    * [JavaScript Shaper](http://jsshaper.org/)
+    * [Zeon](https://github.com/qfox/Zeon) and [ZeParser](https://github.com/qfox/ZeParser)
+    * [escodegen](https://github.com/Constellation/escodegen)
+    * [Creating a JavaScript parser](http://cjihrig.com/blog/creating-a-javascript-parser/)
