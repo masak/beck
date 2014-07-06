@@ -107,3 +107,9 @@ Yes.
     * [Zeon](https://github.com/qfox/Zeon) and [ZeParser](https://github.com/qfox/ZeParser)
     * [escodegen](https://github.com/Constellation/escodegen)
     * [Creating a JavaScript parser](http://cjihrig.com/blog/creating-a-javascript-parser/)
+* [Zen
+  Coding](https://mondaybynoon.com/the-art-of-zen-coding-bringing-snippets-to-a-new-level/),
+  nowadays renamed [Emmet](http://emmet.io/), with
+  [lots](https://code.google.com/p/zen-coding/wiki/ZenHTMLElementsEn)
+  [of](https://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
+  [features](https://code.google.com/p/zen-coding/wiki/ZenCSSPropertiesEn).
