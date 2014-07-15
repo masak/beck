@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Parser</title>
+</head>
+<body>
+
+<textarea id="input">
+</textarea>
+
+<pre id="output">
+!!!
+</pre>
+    
+<script>
+    var module = {};    // workaround to be able to load parser.js
+</script>
+<script src="parser.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    $('#input').on('keyup', function() {
+        var text = $('#input').val();
+        var parser = new Parser;
+        var result = parser.parse(text);
+        var json = JSON.stringify(result, null, "  ");
+        $('#output').html(json);
+    });
+</script>
+
+</body>
+</html>
