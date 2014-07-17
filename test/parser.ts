@@ -28,8 +28,7 @@ describe('HTML parser', function(){
                             {
                                 type: 'identifier',
                                 start: 1,
-                                end: 5,
-                                zygs: []
+                                end: 5
                             }
                         ]
                     },
@@ -48,7 +47,6 @@ describe('HTML parser', function(){
                                 type: 'identifier',
                                 start: 8,
                                 end: 12,
-                                zygs: []
                             }
                         ]
                     }

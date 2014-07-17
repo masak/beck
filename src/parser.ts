@@ -9,9 +9,17 @@ class Parser {
             return pos >= input.length;
         }
 
-        function make(type : string, cb : (node) => void) {
+        function term(type : string, cb : (addZyg) => void) {
             var node = { type: type, start: pos, end: 0, zygs: [] };
-            cb(node);
+            cb(zyg => node.zygs.push(zyg));
+            node.end = pos;
+
+            return node;
+        }
+
+        function token(type : string, cb : () => void) {
+            var node = { type: type, start: pos, end: 0 };
+            cb();
             node.end = pos;
 
             return node;
@@ -23,35 +31,35 @@ class Parser {
         }
 
         function identifier() {
-            return make('identifier', node => {
+            return token('identifier', () => {
                 pos += input.substring(pos).match(/\w+/)[0].length;
             });
         }
 
         function start_tag() {
-            return make('start-tag', node => {
+            return term('start-tag', addZyg => {
                 expect('<');
-                node.zygs.push(identifier());
+                addZyg(identifier());
                 expect('>');
             });
         }
         function content() {
             // TODO: handle content
-            return make('content', node => {});
+            return term('content', addZyg => {});
         }
         function end_tag() {
-            return make('end-tag', node => {
+            return term('end-tag', addZyg => {
                 expect('</');
-                node.zygs.push(identifier());
+                addZyg(identifier());
                 expect('>');
             });
         }
 
         function element() {
-            return make('element', node => {
-                node.zygs.push(start_tag());
-                node.zygs.push(content());
-                node.zygs.push(end_tag());
+            return term('element', addZyg => {
+                addZyg(start_tag());
+                addZyg(content());
+                addZyg(end_tag());
             });
         }
 
