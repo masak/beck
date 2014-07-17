@@ -1,8 +1,15 @@
 export = Parser;
 
 class Parser {
+    static NO_ERROR = {};
+
     parse(input : string) {
-        var result = [];
+        var result = {
+            tree: [],
+            error: Parser.NO_ERROR
+        };
+
+        var error;
 
         var pos = 0;
         function eof() {
@@ -32,6 +39,13 @@ class Parser {
 
         function identifier() {
             return token('identifier', () => {
+                if (eof()) {
+                    error = {
+                        expected: 'identifier',
+                        pos: pos
+                    };
+                    throw new Error;
+                }
                 pos += input.substring(pos).match(/\w+/)[0].length;
             });
         }
@@ -63,8 +77,13 @@ class Parser {
             });
         }
 
-        while (!eof()) {
-            result.push(element());
+        try {
+            while (!eof()) {
+                result.tree.push(element());
+            }
+        }
+        catch (e) {
+            result.error = error;
         }
 
         return result;

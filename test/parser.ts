@@ -8,13 +8,13 @@ describe('HTML parser', function(){
     it('should return empty on empty input', () => {
         var p = new parser;
         var result = p.parse('');
-        assert.deepEqual(result, []);
+        assert.deepEqual(result.tree, []);
     });
 
     it('should return simple syntax tree on correct HTML', () => {
         var p = new parser;
         var result = p.parse('<html></html>');
-        assert.deepEqual(result, [
+        assert.deepEqual(result.tree, [
             {
                 type: 'element',
                 start: 0,
@@ -53,5 +53,16 @@ describe('HTML parser', function(){
                 ]
             }
         ]);
+    });
+
+    it('should give an error on missing identifier in start tag', () => {
+        var p = new parser;
+        var result = p.parse('<');
+        assert.deepEqual(result.tree, [
+        ]);
+        assert.deepEqual(result.error, {
+            expected: 'identifier',
+            pos: 1
+        });
     });
 });
