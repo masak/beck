@@ -62,7 +62,20 @@ describe('HTML parser', function(){
         ]);
         assert.deepEqual(result.error, {
             expected: 'identifier',
+            got: 'EOF',
             pos: 1
+        });
+    });
+
+    it('should give an error on missing ">" in start tag', () => {
+        var p = new parser;
+        var result = p.parse('<html');
+        assert.deepEqual(result.tree, [
+        ]);
+        assert.deepEqual(result.error, {
+            expected: '(>)',
+            got: 'EOF',
+            pos: 5
         });
     });
 });

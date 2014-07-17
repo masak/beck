@@ -33,7 +33,14 @@ class Parser {
         }
 
         function expect(s : string) {
-            // TODO: error handling
+            if (input.substring(pos, pos + s.length) !== s) {
+                error = {
+                    expected: '(' + s + ')',
+                    got: eof() ? 'EOF' : input.substring(pos, pos + 1),
+                    pos: pos
+                };
+                throw new Error;
+            }
             pos += s.length;
         }
 
@@ -42,6 +49,7 @@ class Parser {
                 if (eof()) {
                     error = {
                         expected: 'identifier',
+                        got: 'EOF',
                         pos: pos
                     };
                     throw new Error;
