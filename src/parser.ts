@@ -1,5 +1,26 @@
 export = Parser;
 
+class Node {
+    end: number;
+
+    constructor(public type: string, public start: number) {
+        this.type = type;
+        this.start = start;
+    }
+}
+
+class Term extends Node {
+    zygs: Node[];
+
+    constructor(type: string, start: number) {
+        super(type, start);
+        this.zygs = [];
+    }
+}
+
+class Token extends Node {
+}
+
 class Parser {
     static NO_ERROR = {};
 
@@ -16,20 +37,20 @@ class Parser {
             return pos >= input.length;
         }
 
-        function term(type : string, cb : (addZyg) => void) {
-            var node = { type: type, start: pos, end: 0, zygs: [] };
-            cb(zyg => node.zygs.push(zyg));
-            node.end = pos;
+        function term(type : string, cb : (zyg) => void) : Term {
+            var term = new Term(type, pos);
+            cb(zyg => term.zygs.push(zyg));
+            term.end = pos;
 
-            return node;
+            return term;
         }
 
-        function token(type : string, cb : () => void) {
-            var node = { type: type, start: pos, end: 0 };
+        function token(type : string, cb : () => void) : Token {
+            var token = new Token(type, pos);
             cb();
-            node.end = pos;
+            token.end = pos;
 
-            return node;
+            return token;
         }
 
         function expect(s : string) {
@@ -59,29 +80,29 @@ class Parser {
         }
 
         function start_tag() {
-            return term('start-tag', addZyg => {
+            return term('start-tag', zyg => {
                 expect('<');
-                addZyg(identifier());
+                zyg(identifier());
                 expect('>');
             });
         }
         function content() {
             // TODO: handle content
-            return term('content', addZyg => {});
+            return term('content', zyg => {});
         }
         function end_tag() {
-            return term('end-tag', addZyg => {
+            return term('end-tag', zyg => {
                 expect('</');
-                addZyg(identifier());
+                zyg(identifier());
                 expect('>');
             });
         }
 
         function element() {
-            return term('element', addZyg => {
-                addZyg(start_tag());
-                addZyg(content());
-                addZyg(end_tag());
+            return term('element', zyg => {
+                zyg(start_tag());
+                zyg(content());
+                zyg(end_tag());
             });
         }
 
