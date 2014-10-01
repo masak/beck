@@ -1,0 +1,99 @@
+## general
+
+a. rudimentary dom-based editor elements
+b. current line highlighting
+c. syntax highlighting
+d. indentation
+e. (folding)
+f. inspections
+g. fixes
+h. completion
+i. abbreviations
+
+## html
+
+a. parse start tags and end tags
+b. parse text content
+c. parse nested elements
+d. error if start tag does not match end tag
+e. parse attributes
+f. parse boolean attributes
+g. (parse comments)
+h. (parse processing instructions)
+i. html syntax highlighting
+j. detect duplicate id
+k. refactor rename class
+l. element folding
+m. element completion
+n. class completion
+o. auto-insertion of closing tags
+p. emmet shortcut for h1
+q. emmet shortcut for entire html document
+
+## css
+
+a. parse element, empty block
+b. parse css property
+c. parse id
+d. parse class
+e. parse X Y descendent
+f. (parse X > Y child)
+g. (parse X + Y sibling)
+h. refactor rename class
+i. html refactor rename class affects css files too
+j. css refactor rename class affects html files too
+i. refactor rename id
+j. flag unused css rules
+k. flag unused classes and ids (in html)
+
+## javascript
+
+a. parse simple statement
+b. parse variable declaration
+c. parse if statement
+d. parse function declaration
+e. refactor rename variable
+f. flag unused variables
+g. go to variable definition
+h. go to function definition
+i. refactor extract function
+j. refactor extract method
+k. refactor inline function
+l. (inline mode: navigate all code in one routine) https://news.ycombinator.com/item?id=8377052
+m. abbreviate anon function as TypeScript arrow function
+n. find usages of variable
+o. find usages of function
+p. inspection expression in function without return statement
+q. and fix
+r. refactor extract variable
+s. refactor inline variable
+t. refactor change signature
+u. (show call graph)
+v. show unused js import in html
+
+## typescript
+
+a. parse class declaration
+b. parse interface declaration
+c. flag unused properties
+d. complete on property or method
+e. type check lexical variable
+
+## jquery
+
+a. inspection include jquery
+b. and fix
+c. take class and ids into account when figuring what is unused
+
+## angular js
+
+a. inspection include angular
+b. and fix
+r. refactor extract method from expression
+s. flag unused variables (taking ng directives into account)
+t. suggest to auto-define and initialize model variable for ng-if/ng-show/ng-repeat
+u. inspection add ng-app to body element
+v. refactor rename object property (should affect html and js)
+w. refactor html table or list into ng-repeat
+x. refactor extract directive/template
+y. refactor change signature
