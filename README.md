@@ -88,6 +88,7 @@ Yes.
 * The [features of Resharper](http://www.jetbrains.com/resharper/features/)
   look well worth investigating in detail. It's free to download and
   evaluate.
+* The more I learn about PSI à la IntelliJ, the more I like the idea.
 * [TSLint](https://github.com/palantir/tslint) is also interesting to
   keep an eye on.
 * These links come from a previous effort to catalogue and understand
