@@ -89,6 +89,8 @@ c. take class and ids into account when figuring what is unused
 
 a. inspection include angular
 b. and fix
+c. find common misuses of dashes/camelcase across the two worlds
+d. and fixes
 r. refactor extract method from expression
 s. flag unused variables (taking ng directives into account)
 t. suggest to auto-define and initialize model variable for ng-if/ng-show/ng-repeat
