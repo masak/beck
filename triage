@@ -45,6 +45,8 @@ j. css refactor rename class affects html files too
 i. refactor rename id
 j. flag unused css rules
 k. flag unused classes and ids (in html)
+l. go to id definition
+m. go to CSS rule (directly if it's unique, otherwise choose)
 
 ## javascript
 
@@ -78,6 +80,7 @@ b. parse interface declaration
 c. flag unused properties
 d. complete on property or method
 e. type check lexical variable
+f. go to class declaration
 
 ## jquery
 
@@ -91,6 +94,9 @@ a. inspection include angular
 b. and fix
 c. find common misuses of dashes/camelcase across the two worlds
 d. and fixes
+e. go to controller definition
+f. go to directive definition
+g. go to service definition
 r. refactor extract method from expression
 s. flag unused variables (taking ng directives into account)
 t. suggest to auto-define and initialize model variable for ng-if/ng-show/ng-repeat
