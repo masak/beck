@@ -117,3 +117,4 @@ Yes.
 * This post about [syntax
   highlighting](http://www.wilfred.me.uk/blog/2014/09/27/the-definitive-guide-to-syntax-highlighting/)
 * [WebStorm](http://www.jetbrains.com/webstorm/)
+* [safesj](https://github.com/sinelaw/sjs/)
